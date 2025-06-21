@@ -238,13 +238,11 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 
 ---
 ##  Next Steps & Contributions
-
-###  Planned Enhancements
-
 * Integrate **ELK Stack** for enhanced log analysis
 * Automate attack execution using **Python scripts**
 * Implement **Wazuh SIEM** for better threat detection
-
+  
+---
 ###  How to Contribute
 
 1. Fork the repository
