@@ -39,7 +39,7 @@ This repository provides a structured environment for blue teamers and SOC analy
 * **Kali Linux**: Attacker simulation tools and payload generation
 
 ```text
-Kali Linux(Attacker)------> Windows VM(Victim)------>UBUNTU (SOC LAB)
+Kali Linux(Attacker)------> Windows VM(Victim)------>UBUNTU VM (SOC SERVICES)
 ```
 
 All VMs are connected via an **internal virtual LAN** within UTM.
