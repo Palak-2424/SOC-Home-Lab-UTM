@@ -235,6 +235,41 @@ All VMs are connected via an **internal virtual LAN** within UTM.
   - **Sysmon logs** in Splunk
 
 ---
+## 🛠 Troubleshooting
+
+### Network Not Working Between VMs
+- Ensure all VMs use **Shared Network (Emulated VLAN)** in UTM.
+- Confirm IP address allocation (`ip a` for Linux, `ipconfig` for Windows).
+- Test connectivity with `ping` between VMs.
+- Check and temporarily disable the Windows Firewall if needed.
+
+---
+
+### No Logs Showing in Splunk
+- Make sure Splunk is listening on **port 9997** (`sudo ss -tulnp | grep 9997`).
+- Ensure Splunk Universal Forwarder (UF) is running on Windows.
+- Verify `inputs.conf` is correctly configured on Splunk (Ubuntu).
+- Confirm Sysmon is active and generating logs (`Get-Process sysmon64` or view Event Viewer).
+- Restart Splunk and UF if changes were made.
+
+---
+
+### Suricata Not Generating Alerts
+- Ensure Suricata is installed and running (`sudo systemctl status suricata`).
+- Confirm `eve.json` logging is enabled in `suricata.yaml`.
+- Use `tail -f /var/log/suricata/eve.json` to monitor alerts.
+- Simulate network activity (e.g., `nmap` scan) from Kali to Windows.
+
+---
+
+### Nessus Setup or Scan Issues
+- Verify Nessus is running (`sudo systemctl status nessusd`).
+- Access Nessus at `https://<ubuntu-ip>:8834`.
+- Re-enter activation code or credentials if access fails.
+- Check if scan target (Windows IP) is reachable from Ubuntu.
+- Restart Nessus service if stuck.
+
+---
 ##  Next Steps & Contributions
 * Integrate **ELK Stack** for enhanced log analysis
 * Automate attack execution using **Python scripts**
