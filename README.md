@@ -259,8 +259,8 @@ This project demonstrates how to build a fully functional home Security Operatio
 - SOC workflow design
 ---
 
-## 📌 Connect with Me
+## Connect with Me
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/palakgupta2405)  
-- 💻 [GitHub](https://github.com/Palak-2424)
+-  [LinkedIn](https://www.linkedin.com/in/palakgupta2405)  
+-  [GitHub](https://github.com/Palak-2424)
 
