@@ -235,7 +235,7 @@ All VMs are connected via an **internal virtual LAN** within UTM.
   - **Sysmon logs** in Splunk
 
 ---
-## 🛠 Troubleshooting
+## Troubleshooting
 
 ### Network Not Working Between VMs
 - Ensure all VMs use **Shared Network (Emulated VLAN)** in UTM.
