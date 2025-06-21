@@ -59,18 +59,11 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 | UTM (macOS)       | Virtualization platform               |
 
 ---
-
-Thanks! The error happened because the update couldn’t locate the exact header format in the document.
-
-Let me give you the **corrected and detailed Step 1 content** right here in the chat, formatted with sub-steps:
+## Step-by-Step Lab Configuration
 
 ---
 
-## ⚙️ Step-by-Step Lab Configuration
-
----
-
-### ✅ Step 1: Installing UTM and Creating Virtual Machines
+### Step 1: Installing UTM and Creating Virtual Machines
 
 #### **1.1 Installing UTM on macOS**
 
