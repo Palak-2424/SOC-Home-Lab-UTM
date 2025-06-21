@@ -148,11 +148,6 @@ All VMs are connected via an **internal virtual LAN** within UTM.
   tail -f /var/log/suricata/eve.json
   ```
 ---
-
-Perfect — here's the clean, bullet-point style format for:
-
----
-
 ### Step 4: Installing Nessus Essentials on Ubuntu
 
 * Download Nessus Essentials from [tenable.com](https://www.tenable.com/products/nessus)
