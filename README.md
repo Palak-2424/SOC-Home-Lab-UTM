@@ -60,49 +60,69 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 
 ---
 
-⚙️ Step-by-Step Lab Configuration
+Thanks! The error happened because the update couldn’t locate the exact header format in the document.
 
-✅ Step 1: Installing UTM and Creating Virtual Machines
-1.1 Installing UTM on macOS
-
-Go to the official site: https://mac.getutm.app
-Click Download UTM → install the .dmg file
-Drag and drop UTM into your Applications folder
-Launch UTM to begin creating your virtual machines
-1.2 Creating the Kali Linux VM
-
-Download ISO: https://www.kali.org/get-kali/
-Open UTM → Click Create New VM
-Choose:
-Virtualize → Architecture: x86_64
-Attach ISO: Kali Linux ISO
-Set RAM: 4 GB
-CPU: 2 cores
-Storage: 40 GB (dynamic recommended)
-Network: Shared Network (Emulated VLAN)
-1.3 Creating the Ubuntu VM
-
-Download ISO: https://ubuntu.com/download/desktop
-In UTM, repeat steps:
-Architecture: x86_64
-Attach Ubuntu 24.04 ISO
-Set RAM: 6–8 GB
-CPU: 4 cores
-Storage: 60 GB
-Network: Shared Network (Emulated VLAN)
-1.4 Creating the Windows 10 VM
-
-Download ISO: https://www.microsoft.com/en-us/software-download/windows10ISO
-In UTM:
-Architecture: x86_64
-Attach Windows 10 ISO
-Set RAM: 4 GB
-CPU: 2 cores
-Storage: 50 GB
-Network: Shared Network (Emulated VLAN)
+Let me give you the **corrected and detailed Step 1 content** right here in the chat, formatted with sub-steps:
 
 ---
 
+## ⚙️ Step-by-Step Lab Configuration
+
+---
+
+### ✅ Step 1: Installing UTM and Creating Virtual Machines
+
+#### **1.1 Installing UTM on macOS**
+
+* Go to the official site: [https://mac.getutm.app](https://mac.getutm.app)
+* Click **Download UTM** → install the `.dmg` file
+* Drag and drop UTM into your **Applications** folder
+* Launch UTM to begin creating your virtual machines
+
+---
+
+#### **1.2 Creating the Kali Linux VM**
+
+* Download ISO: [https://www.kali.org/get-kali/](https://www.kali.org/get-kali/)
+* Open UTM → Click **Create New VM**
+* Choose:
+
+  * **Virtualize** → Architecture: `x86_64`
+  * Attach ISO: Kali Linux ISO
+  * Set RAM: 4 GB
+  * CPU: 2 cores
+  * Storage: 40 GB (dynamic recommended)
+  * Network: Shared Network (Emulated VLAN)
+
+---
+
+#### **1.3 Creating the Ubuntu VM**
+
+* Download ISO: [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
+* In UTM, repeat steps:
+
+  * Architecture: `x86_64`
+  * Attach Ubuntu 24.04 ISO
+  * Set RAM: 6–8 GB
+  * CPU: 4 cores
+  * Storage: 60 GB
+  * Network: Shared Network (Emulated VLAN)
+
+---
+
+#### **1.4 Creating the Windows 10 VM**
+
+* Download ISO: [https://www.microsoft.com/en-us/software-download/windows10ISO](https://www.microsoft.com/en-us/software-download/windows10ISO)
+* In UTM:
+
+  * Architecture: `x86_64`
+  * Attach Windows 10 ISO
+  * Set RAM: 4 GB
+  * CPU: 2 cores
+  * Storage: 50 GB
+  * Network: Shared Network (Emulated VLAN)
+
+---
 ## 🔍 Detection Use Cases
 
 | Attack Scenario      | Detection Tool | Source  | Observable Event             |
