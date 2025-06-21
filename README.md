@@ -78,10 +78,10 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 * Open UTM → Click **Create New VM**
 * Choose:
 
-  * **Virtualize** → Architecture: `x86_64`
+  * **Virtualize** → Architecture: `ARM64 (aarch64)`
   * Attach ISO: Kali Linux ISO
   * Set RAM: 4 GB
-  * CPU: 2 cores
+  * CPU: 3 cores
   * Storage: 40 GB (dynamic recommended)
   * Network: Shared Network (Emulated VLAN)
 
@@ -90,8 +90,9 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 * Download ISO: [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
 * In UTM, repeat steps:
 
+  * Choose Emulate
   * Architecture: `x86_64`
-  * Attach Ubuntu 24.04 ISO
+  * Attach Ubuntu 22.04/24.04 ISO
   * Set RAM: 6–8 GB
   * CPU: 4 cores
   * Storage: 60 GB
@@ -102,7 +103,8 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 * Download ISO: [https://www.microsoft.com/en-us/software-download/windows10ISO](https://www.microsoft.com/en-us/software-download/windows10ISO)
 * In UTM:
 
-  * Architecture: `x86_64`
+  * Choose Virtualize
+  * Architecture: `ARM64 (aarch64)`
   * Attach Windows 10 ISO
   * Set RAM: 4 GB
   * CPU: 2 cores
