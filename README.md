@@ -64,7 +64,7 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 
 ### 1. Ubuntu (SOC Server)
 
-* OS: Ubuntu 22.04 LTS
+* OS: Ubuntu 22.04/24.04 LTS
 * Tools: Splunk Enterprise, Suricata IDS, Nessus Essentials
 * Purpose: Receives logs, detects attacks, scans vulnerabilities
 
