@@ -112,6 +112,57 @@ All VMs are connected via an **internal virtual LAN** within UTM.
   * Network: Shared Network (Emulated VLAN)
 
 ---
+Got it! Here's your updated **README-ready version** of Step 2 and Step 3 — written as clean bullet points with **only essential commands** for clarity and professionalism:
+
+---
+
+### ✅ Step 2: Installing Splunk on Ubuntu (Log Monitoring Server)
+
+* Download Splunk Enterprise (`.deb` package) from [splunk.com](https://www.splunk.com/en_us/download/splunk-enterprise.html)
+* Install using `dpkg`
+
+  ```bash
+  sudo dpkg -i splunk*.deb
+  ```
+* Start Splunk and accept the license
+* Set admin credentials during the first launch
+* Access Splunk at `http://<ubuntu-ip>:8000`
+* Enable TCP input for receiving logs from forwarders:
+
+  ```ini
+  [splunktcp://9997]
+  disabled = 0
+  ```
+* Restart Splunk to apply changes
+
+---
+
+### ✅ Step 3: Installing Suricata on Ubuntu (Network IDS)
+
+* Update the system and install Suricata via APT
+* Verify installation with:
+
+  ```bash
+  suricata --build-info
+  ```
+* Enable JSON output by editing `suricata.yaml` and activating `eve.json` logging
+* Start and enable the Suricata service:
+
+  ```bash
+  sudo systemctl enable --now suricata
+  ```
+* View live alerts from Suricata:
+
+  ```bash
+  tail -f /var/log/suricata/eve.json
+  ```
+
+> Optionally forward `eve.json` into Splunk using Universal Forwarder or monitor input.
+
+---
+
+Would you like me to format Step 4 and Step 5 the same way?
+
 ## 🔍 Detection Use Cases
 
 | Attack Scenario      | Detection Tool | Source  | Observable Event             |
