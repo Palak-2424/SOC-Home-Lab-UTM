@@ -9,13 +9,11 @@
 * [Project Overview](#project-overview)
 * [Architecture](#architecture)
 * [Tools Used](#tools-used)
-* [Virtual Machine Setup](#virtual-machine-setup)
 * [Step-by-Step Lab Configuration](#step-by-step-lab-configuration)
-* [Detection Use Cases](#detection-use-cases)
-* [Screenshots](#screenshots)
+* Troubleshooting
 * [Next Steps & Contributions](#next-steps--contributions)
-* [License](#license)
-
+* How to Contribute
+* Conclusion
 ---
 
 ##  Project Overview
