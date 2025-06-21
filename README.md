@@ -149,6 +149,74 @@ All VMs are connected via an **internal virtual LAN** within UTM.
   ```
 ---
 
+Perfect — here's the clean, bullet-point style format for:
+
+---
+
+### Step 4: Installing Nessus Essentials on Ubuntu
+
+* Download Nessus Essentials from [tenable.com](https://www.tenable.com/products/nessus)
+* Choose the **.deb** package for Ubuntu
+* Install using `dpkg`
+
+  ```bash
+  sudo dpkg -i Nessus*.deb
+  ```
+* Start Nessus service:
+
+  ```bash
+  sudo systemctl start nessusd
+  ```
+* Access Nessus setup at: `https://<ubuntu-ip>:8834`
+* Register with a free activation code and create a login
+* Perform a **Local Scan** targeting the Windows VM
+
+> Nessus helps identify open ports, vulnerabilities, misconfigurations, and more.
+
+---
+
+### Step 5: Configuring Windows 10 (Sysmon + Splunk UF)
+
+#### Sysmon Setup
+
+* Download **Sysmon** from [Microsoft Sysinternals](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+* Use a pre-configured ruleset from [SwiftOnSecurity's GitHub](https://github.com/SwiftOnSecurity/sysmon-config)
+* Run Sysmon with the config:
+
+  ```bash
+  Sysmon64.exe -accepteula -i sysmonconfig-export.xml
+  ```
+* Confirm Sysmon is active using:
+
+  ```powershell
+  Get-Process sysmon64
+  ```
+
+#### Install Splunk Universal Forwarder (UF)
+
+* Download from [Splunk's website](https://www.splunk.com/en_us/download/universal-forwarder.html)
+* During setup:
+
+  * Enter Splunk Server IP (Ubuntu machine)
+  * Use port **9997** for log forwarding
+  * Enable forwarding of **Application, Security, and System** logs
+
+#### 🔎 Validate Log Forwarding
+
+* In Splunk Web (Ubuntu):
+  Search:
+
+  ```
+  index=wineventlog OR index=main
+  ```
+* Look for Sysmon logs such as:
+
+  * Process creation (Event ID 1)
+  * Network connections (Event ID 3)
+  * Access to LSASS (Event ID 10)
+
+---
+
 ## 🔍 Detection Use Cases
 
 | Attack Scenario      | Detection Tool | Source  | Observable Event             |
