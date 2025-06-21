@@ -235,33 +235,8 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 -  Monitor for detections:
   - **Suricata** logs: `/var/log/suricata/eve.json`
   - **Sysmon logs** in Splunk:
-    - Event ID 1: Process Creation
-    - Event ID 3: Network Connection
-    - Event ID 10: LSASS Access
-
-
-## 🔍 Detection Use Cases
-
-| Attack Scenario      | Detection Tool | Source  | Observable Event             |
-| -------------------- | -------------- | ------- | ---------------------------- |
-| Port scanning (nmap) | Suricata       | Ubuntu  | `ET SCAN Nmap` signature     |
-| Credential dumping   | Sysmon         | Windows | Event ID 10: LSASS access    |
-| Reverse shell        | Suricata       | Ubuntu  | Suspicious outbound TCP flow |
-| Nessus scan          | Splunk         | Ubuntu  | Unusual port probes          |
 
 ---
-
-## 📸 Screenshots
-
-Please upload all screenshots to the `screenshots/` folder.
-Examples:
-
-* `screenshots/splunk-sysmon.png`
-* `screenshots/suricata-nmap-detect.png`
-* `screenshots/nessus-report.png`
-
----
-
 ##  Next Steps & Contributions
 
 ###  Planned Enhancements
