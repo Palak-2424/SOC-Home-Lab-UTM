@@ -232,7 +232,7 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 
 -  Monitor for detections:
   - **Suricata** logs: `/var/log/suricata/eve.json`
-  - **Sysmon logs** in Splunk:
+  - **Sysmon logs** in Splunk
 
 ---
 ##  Next Steps & Contributions
