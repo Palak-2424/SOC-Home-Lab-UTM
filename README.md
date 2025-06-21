@@ -4,7 +4,7 @@
 
 ---
 
-## 📑 Table of Contents
+##  Table of Contents
 
 * [Project Overview](#project-overview)
 * [Architecture](#architecture)
@@ -18,7 +18,7 @@
 
 ---
 
-## 🧠 Project Overview
+##  Project Overview
 
 This repository provides a structured environment for blue teamers and SOC analysts to build detection engineering skills. Built entirely within **UTM on macOS**, this lab simulates:
 
@@ -30,7 +30,7 @@ This repository provides a structured environment for blue teamers and SOC analy
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 **UTM Virtual Machines:**
 
@@ -46,7 +46,7 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 
 ---
 
-## 🛠️ Tools Used
+##  Tools Used
 
 | Tool              | Description                           |
 | ----------------- | ------------------------------------- |
@@ -60,7 +60,7 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 
 ---
 
-## 🧰 Virtual Machine Setup
+##  Virtual Machine Setup
 
 ### 1. Ubuntu (SOC Server)
 
@@ -80,7 +80,7 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 
 ---
 
-## ⚙️ Step-by-Step Lab Configuration
+##  Step-by-Step Lab Configuration
 
 ### Step 1: Install UTM and Create VMs
 
@@ -131,15 +131,15 @@ Examples:
 
 ---
 
-## 🚀 Next Steps & Contributions
+##  Next Steps & Contributions
 
-### 🔧 Planned Enhancements
+###  Planned Enhancements
 
 * Integrate **ELK Stack** for enhanced log analysis
 * Automate attack execution using **Python scripts**
 * Implement **Wazuh SIEM** for better threat detection
 
-### 🤝 How to Contribute
+###  How to Contribute
 
 1. Fork the repository
 2. Create a new branch with your improvements
