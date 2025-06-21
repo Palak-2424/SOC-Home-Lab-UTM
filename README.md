@@ -10,10 +10,17 @@
 * [Architecture](#architecture)
 * [Tools Used](#tools-used)
 * [Step-by-Step Lab Configuration](#step-by-step-lab-configuration)
-* Troubleshooting
+  * [Step 1: Installing UTM and Creating Virtual Machines](#step-1-installing-utm-and-creating-virtual-machines)
+  * [Step 2: Installing Splunk on Ubuntu (Log Monitoring Server)](#step-2-installing-splunk-on-ubuntu-log-monitoring-server)
+  * [Step 3: Installing Suricata on Ubuntu (Network IDS)](#step-3-installing-suricata-on-ubuntu-network-ids)
+  * [Step 4: Installing Nessus Essentials on Ubuntu](#step-4-installing-nessus-essentials-on-ubuntu)
+  * [Step 5: Configuring Windows 10 (Sysmon + Splunk UF)](#step-5-configuring-windows-10-sysmon--splunk-uf)
+  * [Step 6: Simulating Attacks from Kali Linux](#step-6-simulating-attacks-from-kali-linux)
+* [Troubleshooting](#troubleshooting)
 * [Next Steps & Contributions](#next-steps--contributions)
-* How to Contribute
-* Conclusion
+* [How to Contribute](#how-to-contribute)
+* [Conclusion](#conclusion)
+
 ---
 
 ##  Project Overview
@@ -222,11 +229,6 @@ All VMs are connected via an **internal virtual LAN** within UTM.
     ```
 
   - **Mimikatz** – Simulate credential theft locally (can be done in lab-safe context)
-
-  - **Netcat** – Simulate reverse shell setup to observe logging behavior:
-    ```bash
-    nc -nvlp 4444
-    ```
 
 -  Monitor for detections:
   - **Suricata** logs: `/var/log/suricata/eve.json`
