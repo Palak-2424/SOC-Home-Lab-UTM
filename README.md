@@ -166,8 +166,6 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 * Register with a free activation code and create a login
 * Perform a **Local Scan** targeting the Windows VM
 
-> Nessus helps identify open ports, vulnerabilities, misconfigurations, and more.
-
 ---
 
 ### Step 5: Configuring Windows 10 (Sysmon + Splunk UF)
@@ -250,7 +248,19 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 3. Submit a pull request for review
 
 ---
+## Conclusion
 
-## 📄 License
+This project demonstrates how to build a fully functional home Security Operations Center (SOC) lab using only UTM and open-source tools on macOS. By simulating realistic attacks and monitoring them with enterprise-grade tooling like Splunk, Suricata, and Nessus, this lab provides a powerful hands-on platform for learning:
 
-*This project currently has no license. You may add MIT License later to allow open use.*
+- Threat detection
+- Endpoint telemetry analysis
+- Network intrusion monitoring
+- Vulnerability assessment
+- SOC workflow design
+---
+
+## 📌 Connect with Me
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/palakgupta2405)  
+- 💻 [GitHub](https://github.com/Palak-2424)
+
