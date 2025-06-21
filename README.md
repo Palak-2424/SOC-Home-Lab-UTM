@@ -211,6 +211,34 @@ All VMs are connected via an **internal virtual LAN** within UTM.
   * Access to LSASS (Event ID 10)
 
 ---
+### Step 6: Simulating Attacks from Kali Linux
+
+- Launch the Kali Linux VM and simulate attacks to generate telemetry and test detections:
+
+  - **Nmap** – Scan open ports on the Windows VM:
+    ```bash
+    nmap -sS -Pn <victim_ip>
+    ```
+
+  - **Hydra** – Attempt brute-force attacks (e.g., RDP or SMB if open):
+    ```bash
+    hydra -l admin -P /usr/share/wordlists/rockyou.txt rdp://<victim_ip>
+    ```
+
+  - **Mimikatz** – Simulate credential theft locally (can be done in lab-safe context)
+
+  - **Netcat** – Simulate reverse shell setup to observe logging behavior:
+    ```bash
+    nc -nvlp 4444
+    ```
+
+-  Monitor for detections:
+  - **Suricata** logs: `/var/log/suricata/eve.json`
+  - **Sysmon logs** in Splunk:
+    - Event ID 1: Process Creation
+    - Event ID 3: Network Connection
+    - Event ID 10: LSASS Access
+
 
 ## 🔍 Detection Use Cases
 
