@@ -72,8 +72,6 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 * Drag and drop UTM into your **Applications** folder
 * Launch UTM to begin creating your virtual machines
 
----
-
 #### **1.2 Creating the Kali Linux VM**
 
 * Download ISO: [https://www.kali.org/get-kali/](https://www.kali.org/get-kali/)
@@ -87,8 +85,6 @@ All VMs are connected via an **internal virtual LAN** within UTM.
   * Storage: 40 GB (dynamic recommended)
   * Network: Shared Network (Emulated VLAN)
 
----
-
 #### **1.3 Creating the Ubuntu VM**
 
 * Download ISO: [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
@@ -100,8 +96,6 @@ All VMs are connected via an **internal virtual LAN** within UTM.
   * CPU: 4 cores
   * Storage: 60 GB
   * Network: Shared Network (Emulated VLAN)
-
----
 
 #### **1.4 Creating the Windows 10 VM**
 
