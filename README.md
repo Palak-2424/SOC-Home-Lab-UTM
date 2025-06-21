@@ -60,52 +60,46 @@ All VMs are connected via an **internal virtual LAN** within UTM.
 
 ---
 
-##  Virtual Machine Setup
+⚙️ Step-by-Step Lab Configuration
 
-### 1. Ubuntu (SOC Server)
+✅ Step 1: Installing UTM and Creating Virtual Machines
+1.1 Installing UTM on macOS
 
-* OS: Ubuntu 22.04/24.04 LTS
-* Tools: Splunk Enterprise, Suricata IDS, Nessus Essentials
-* Purpose: Receives logs, detects attacks, scans vulnerabilities
+Go to the official site: https://mac.getutm.app
+Click Download UTM → install the .dmg file
+Drag and drop UTM into your Applications folder
+Launch UTM to begin creating your virtual machines
+1.2 Creating the Kali Linux VM
 
-### 2. Windows 10 (Victim)
+Download ISO: https://www.kali.org/get-kali/
+Open UTM → Click Create New VM
+Choose:
+Virtualize → Architecture: x86_64
+Attach ISO: Kali Linux ISO
+Set RAM: 4 GB
+CPU: 2 cores
+Storage: 40 GB (dynamic recommended)
+Network: Shared Network (Emulated VLAN)
+1.3 Creating the Ubuntu VM
 
-* Tools: Sysmon (SwiftOnSecurity config), Splunk UF
-* Purpose: Generates real-time endpoint telemetry
+Download ISO: https://ubuntu.com/download/desktop
+In UTM, repeat steps:
+Architecture: x86_64
+Attach Ubuntu 24.04 ISO
+Set RAM: 6–8 GB
+CPU: 4 cores
+Storage: 60 GB
+Network: Shared Network (Emulated VLAN)
+1.4 Creating the Windows 10 VM
 
-### 3. Kali Linux (Attacker)
-
-* Tools: nmap, msfvenom, hydra, mimikatz, netcat
-* Purpose: Simulates adversarial behavior against the Windows VM
-
----
-
-##  Step-by-Step Lab Configuration
-
-### Step 1: Install UTM and Create VMs
-
-* Install UTM from [https://mac.getutm.app/](https://mac.getutm.app/)
-* Create 3 VMs: Ubuntu, Windows 10, Kali Linux
-* Use **shared or host-only network mode** for isolated communication
-
-### Step 2: Ubuntu VM Setup (Splunk + Suricata + Nessus)
-
-* Install Splunk via `.deb` package → enable port 8000
-* Configure inputs.conf to listen on `9997` for logs
-* Install Suricata → Enable `eve.json` logging
-* Register Nessus Essentials and perform local scans
-
-### Step 3: Windows 10 Setup (Sysmon + Splunk UF)
-
-* Install Sysmon using SwiftOnSecurity config
-* Install Splunk Universal Forwarder
-* Configure output to Ubuntu Splunk on port `9997`
-
-### Step 4: Kali Linux Setup (Attack Simulations)
-
-* Launch scans: `nmap`, `hydra`, `msfvenom`
-* Use mimikatz for credential dumping
-* Observe telemetry in Splunk + Suricata logs
+Download ISO: https://www.microsoft.com/en-us/software-download/windows10ISO
+In UTM:
+Architecture: x86_64
+Attach Windows 10 ISO
+Set RAM: 4 GB
+CPU: 2 cores
+Storage: 50 GB
+Network: Shared Network (Emulated VLAN)
 
 ---
 
